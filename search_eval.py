@@ -24,6 +24,7 @@ if __name__ == '__main__':
     ranker = load_ranker(cfg)
     ev = metapy.index.IREval(cfg)
 
+#just to check#
     with open(cfg, 'r') as fin:
         cfg_d = pytoml.load(fin)
 
