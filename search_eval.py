@@ -25,7 +25,7 @@ def load_ranker_2(cfg_file):
     """
     idx = metapy.index.make_inverted_index('config.toml')
     
-    return metapy.index.OkapiBM25(1.2, 0.75, 510)
+    return metapy.index.OkapiBM25(1.2, 0.75, 520)
 
 
 if __name__ == '__main__':
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     cfg = sys.argv[1]
     print('Building or loading index...')
     idx = metapy.index.make_inverted_index(cfg)
-    if (load_ranker(cfg) < 0.7):
+    if (load_ranker(cfg) < 0.9):
         ranker = load_ranker(cfg)
     else:
         ranker = load_ranker_2(cfg)
